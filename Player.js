@@ -10,7 +10,7 @@ export class Player {
         this.speedY = 0;
         this.dx = 0;
         this.dy = 0;
-        this.speedModifier = 3;
+        this.speedModifier = 10;
         // sprite image
         this.image = document.getElementById('bull');
         this.spriteWidth = 255;
@@ -21,6 +21,13 @@ export class Player {
         this.spriteY;
         this.frameX = 5;
         this.frameY = 7;
+    }
+
+    restart() {
+        this.collisionX = this.game.width * 0.5;
+        this.collisionY = this.game.height * 0.5;
+        this.spriteX = this.collisionX - this.width * 0.5;
+        this.spriteY = this.collisionY - this.height * 0.5 - 100;
     }
 
     draw(context) {
