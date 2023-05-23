@@ -15,7 +15,6 @@ window.addEventListener('load', function() {
 
     const game = new Game(canvas);
     game.init();
-    console.log(game);
 
     // graphics loop (update screen)
     let lastTime = 0;
